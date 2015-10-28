@@ -1,0 +1,148 @@
+
+#ownerBar a {background:  #000066; color: #FFF;}
+#ownerBar a:hover { background:  #0000CC; color: #FF0000;}
+
+
+.message-container > .message-north > .message-thread > .message {
+	min-width: 40%;
+	max-width: 70%;
+	margin: 5px;
+	margin-bottom: 2%;
+	padding: 3px 5px 3px 5px;
+	cursor: pointer;
+}
+
+.message-container > .message-north > .message-thread > .message > p {
+	display: block;
+	clear: both;
+	margin-left: 3px;
+	margin-right: 3px;
+	font-size: 15px;
+}
+
+.message-container > .message-north > .message-thread > .message label {
+	margin-top: -13px;
+	font-size: 13px;
+	font-weight: bold;
+	color: #5A5A5A;
+	cursor: pointer;
+}
+
+.message-container > .message-north > .message-thread > .message .message-user {
+	display: block;
+	float: left;
+	margin-left: 3px;
+}
+
+.message-container > .message-north > .message-thread > .message .message-timestamp {
+	display: block;
+	float: right;
+	margin-right: 3px;
+	text-align: right;
+}
+
+.message-container > .message-south > textarea {
+	width: 40em;
+	height: 2em;
+	margin-left: 20px;
+
+	color: #666;
+	background: #f6f6f6;
+	border: 1px solid #b9b9b9;
+	border-top-color: #a4a4a4;
+	box-shadow: 0 1px 1px rgba(0,0,0,.17) inset;
+
+	-webkit-box-sizing: border-box;
+	   -moz-box-sizing: border-box;
+	        box-sizing: border-box;
+}
+
+.message-container > .message-south > textarea:focus {
+	background: #000;
+}
+
+.message-container > .message-south > button {
+	display: block;
+	float: right;
+	margin-top: 5px;
+	height: 35px;
+	width: 80px;
+	color: #000000;
+	background: -webkit-linear-gradient(#F5F5F5, #E9E9E9);
+	background:    -moz-linear-gradient(#F5F5F5, #E9E9E9);
+	background:      -o-linear-gradient(#F5F5F5, #E9E9E9);
+	background:         linear-gradient(#F5F5F5, #E9E9E9);
+	border: 2px solid #CCC;
+	box-shadow: 0px 1px 2px #C6C6C6;
+	cursor: pointer;
+}
+
+.message-container > .message-south > button:hover {
+	background: -webkit-linear-gradient(#FFFFFF, #DFDFDF);
+	background:    -moz-linear-gradient(#FFFFFF, #DFDFDF);
+	background:      -o-linear-gradient(#FFFFFF, #DFDFDF);
+	background:         linear-gradient(#FFFFFF, #DFDFDF);
+}
+
+.message-container > .message-south > button:active {
+	box-shadow: inset 0px 0px 10px #5A5A5A;
+	background: -webkit-linear-gradient(#E9E9E9, #F5F5F5);
+	background:    -moz-linear-gradient(#E9E9E9, #F5F5F5);
+	background:      -o-linear-gradient(#E9E9E9, #F5F5F5);
+	background:         linear-gradient(#E9E9E9, #F5F5F5);
+}
+
+
+
+.nickname {
+    color: #f00;
+    font-weight: bold;
+}
+.msg {
+    color: #444;
+    font-weight: normal;
+}
+
+.inline-right {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	float:right;
+	
+}
+.inline-left {
+	display:inline-block;
+	*display:inline;
+	*zoom:1;
+	float:left;
+	
+}
+#sendBtn { 
+	display:inline-block;
+	*display:inline;
+	*zoom:2;
+	float:right;
+	
+	padding:11px 4px; 
+	font-family:'Helvetica Neue',sans-serif; 
+	font-size:13px; 
+	border-radius:0.2px; 
+	-moz-border-radius:0.2px; 
+	-webkit-border-radius:0.2px;
+	 border:1px solid #1A87B9 ;
+} 
+#sendMessage  textarea {
+	height: 3em;
+	width: 85%;
+}
+
+#sendMessage #sendBtn {
+	position: absolute;
+}
+
+.ui-widget-header,.ui-state-default, ui-button{
+    background: #a0a0a0;
+    border: 1px solid #cfcfcf;
+    color: #FFFFFF;
+    font-weight: bold;
+}
