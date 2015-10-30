@@ -34,7 +34,6 @@ class WsChatEndpoint extends ChatUtils implements ServletContextListener {
 			if (Environment.current == Environment.DEVELOPMENT) {
 				serverContainer.addEndpoint(WsChatEndpoint)
 			}
-			println "--- we have a connection"
 			int defaultMaxSessionIdleTimeout = 0 //config.timeout ?: 0
 			serverContainer.defaultMaxSessionIdleTimeout = defaultMaxSessionIdleTimeout
 		}
@@ -57,7 +56,6 @@ class WsChatEndpoint extends ChatUtils implements ServletContextListener {
 		wsChatUserService = ctx.wsChatUserService
 		wsChatMessagingService = ctx.wsChatMessagingService
 		wsChatRoomService = ctx.wsChatRoomService
-		println  "a websocket connection has been opened for ${room}"
 
 	}
 

@@ -170,6 +170,34 @@ class WsChatTagLib extends WsChatConfService {
 
 	}
 
+
+	def plainCustomerChat = { attrs ->
+		attrs << [controller:controllerName, action: actionName, params: params ]
+		CustomerChatTagBean bean = new CustomerChatTagBean(attrs)
+		if (!bean.roomName) {
+			bean.roomName = randomService.shortRand('livechat')
+			//bean.roomName = 'fred'
+		}
+		// if a username has not been provided so far -
+		// set the username to be Guest{SessionID}
+		// this now means if the user is using same session and is on another page
+		// chat system will recognise them
+		if (!bean.user) {
+			bean.guestUser = true
+			bean.user = 'Guest'+session.id
+		} else {
+			bean.guestUser = false
+		}
+		String uri = "${bean.uri}${bean.roomName}"
+		Map model = [bean:bean, uri:uri]
+		if (bean.template) {
+			out << g.render(template:bean.template, model:model)
+		}else{
+			out << g.render(contextPath: pluginContextPath, template:"/customerChat/chatPage", model: model)
+		}
+
+	}
+	
 	def complete = {attrs ->
 		AutoCompleteBean bean = new AutoCompleteBean(attrs)
 		if (!bean.validate()) {
